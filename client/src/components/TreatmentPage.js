@@ -53,6 +53,7 @@ function TreatmentPage() {
           headers: {
             "Content-Type": "multipart/form-data",
           },
+          
         });
 
         if (response.data.success) {
