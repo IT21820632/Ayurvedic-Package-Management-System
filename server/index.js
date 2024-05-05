@@ -1,4 +1,3 @@
-
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
@@ -8,7 +7,11 @@ app.use(express.json());
 const dotenv = require('dotenv');
 
 dotenv.config();
-const MONGODB_URI = `mongodb+srv://admin:${process.env.MONGODB_PASSWORD}@cluster0.ggx5kyv.mongodb.net/?retryWrites=true&w=majority`;
+const MONGODB_URI = 'mongodb+srv://seller:seller@cluster0.0pyh6h3.mongodb.net/';
+
+
+//`mongodb+srv://admin:${process.env.MONGODB_PASSWORD}@cluster0.ggx5kyv.mongodb.net/?retryWrites=true&w=majority`;
+
 
 app.use('/uploads', express.static('uploads'));
 
@@ -25,3 +28,5 @@ mongoose
     app.listen(PORT, () => console.log('Server is running on port ' + PORT));
   })
   .catch((err) => console.log(err));
+
+

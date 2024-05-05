@@ -5,7 +5,7 @@ import "../css/TreatmentForm.css";
 const TreatmentForm = ({
   handleSubmit,
   handleOnChange,
-  handleFileChange,
+  // handleFileChange,
   handleClose,
   rest,
 }) => {
@@ -14,7 +14,7 @@ const TreatmentForm = ({
       <h2>{rest._id ? "Edit Treatment" : "Add Treatment"}</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="name">Treatment Name:</label>
+          <label htmlFor="name">Product Name:</label>
           <input
             type="text"
             id="name"
@@ -23,8 +23,8 @@ const TreatmentForm = ({
             value={rest.name}
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="image">Treatment Image:</label>
+        {/* <div className="form-group">
+          <label htmlFor="image">Product Image:</label>
           <input
             type="file"
             id="photo"
@@ -32,11 +32,11 @@ const TreatmentForm = ({
             accept="image/*"
             onChange={(e) => handleFileChange(e.target.files[0])}
           />
-        </div>
+        </div> */}
         <div className="form-group">
-          <label htmlFor="packageName">Package Name:</label>
+          <label htmlFor="packageName">Quantity:</label>
           <input
-            type="text"
+            type="number"
             id="packageName"
             name="packageName"
             onChange={handleOnChange}
@@ -72,7 +72,7 @@ const TreatmentForm = ({
           />
         </div>
         <button className="btn btn-signup" type="submit">
-          {rest._id ? "Update" : "Save Treatment"}
+          {rest._id ? "Update" : "Add Product"}
         </button>
         {rest._id && (
           <button className="btn btn-cancel" onClick={handleClose}>

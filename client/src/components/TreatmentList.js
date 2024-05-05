@@ -12,9 +12,9 @@ const TreatmentList = ({ dataList, handleEdit, handleDelete }) => {
       <table>
         <thead>
           <tr>
-            <th>Name</th>
+            <th>Product Name</th>
             <th>Image</th>
-            <th>Package Name</th>
+            <th>Quantity</th>
             <th>Price</th>
             <th>Description 1</th>
             <th>Description 2</th>
@@ -27,7 +27,7 @@ const TreatmentList = ({ dataList, handleEdit, handleDelete }) => {
               <td>{treatment.name}</td>
               <td>
                 <img
-                  src={`http://localhost:8090/uploads/${treatment.image}`}
+                  src={`http://localhost:3000/uploads/${treatment.image}`}
                   alt={`Treatment ${treatment._id}`}
                   style={{ width: '100px', height: '100px' }}
                 />

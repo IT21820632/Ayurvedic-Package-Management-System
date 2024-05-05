@@ -7,8 +7,8 @@ function Header() {
       <nav>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/treatments">Treatments</a></li>
-          <li><a href="/contact">Contact Us</a></li>
+          <li><a href="/treatments">Shoping List</a></li>
+          <li><a href="/contact">Categories</a></li>
           <li><a href="/about">About Us</a></li>
         </ul>
       </nav>

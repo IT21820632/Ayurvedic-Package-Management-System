@@ -17,6 +17,7 @@ function CustomerTreatments() {
     async function fetchTreatments() {
       try {
         const response = await axios.get("/getData");
+        console.log(response);
         if (response.data.success) {
           setTreatments(response.data.data);
         }
@@ -42,7 +43,7 @@ function CustomerTreatments() {
 
     
 
-      <h2>Customer Treatments</h2>
+      <h2>Customer Orders</h2>
       <div className="search-bar">
         <input
           type="text"

@@ -12,7 +12,7 @@ function TreatmentPage() {
   const [formData, setFormData] = useState({
     name: "",
     image: null,
-    packageName: "",
+    quantity: "",
     price: "",
     description1: "",
     description2: "",
@@ -40,8 +40,8 @@ function TreatmentPage() {
 
     const formDataWithFile = new FormData();
     formDataWithFile.append("name", formData.name);
-    formDataWithFile.append("image", formData.image);
-    formDataWithFile.append("packageName", formData.packageName);
+    // formDataWithFile.append("image", formData.image);
+    formDataWithFile.append("quantity", formData.quantity);
     formDataWithFile.append("price", formData.price);
     formDataWithFile.append("description1", formData.description1);
     formDataWithFile.append("description2", formData.description2);
@@ -62,8 +62,8 @@ function TreatmentPage() {
           // Reset the form data
           setFormData({
             name: "",
-            image: null,
-            packageName: "",
+            // image: null,
+            quantity: "",
             price: "",
             description1: "",
             description2: "",
@@ -91,7 +91,7 @@ function TreatmentPage() {
           setFormData({
             name: "",
             image: null,
-            packageName: "",
+            quantity: "",
             price: "",
             description1: "",
             description2: "",
@@ -114,7 +114,7 @@ function TreatmentPage() {
     setFormData({
       _id: treatment._id,
       name: treatment.name,
-      packageName: treatment.packageName,
+      quantity: treatment.quantity,
       price: treatment.price,
       description1: treatment.description1,
       description2: treatment.description2,
@@ -153,10 +153,10 @@ function TreatmentPage() {
   return (
     <div>
    
-      <h2>{formData._id ? "Edit Treatment" : "Add Treatment"}</h2>
+      <h2>{formData._id ? "Edit Treatment" : "Add Products"}</h2>
       <button onClick={() => setAddSection(!addSection)}>
 
-        {addSection ? "Close Form" : "Add Treatment"}
+        {addSection ? "Close Form" : "Add Products"}
       </button>
       {addSection ? (
 

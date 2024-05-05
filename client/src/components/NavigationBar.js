@@ -15,10 +15,10 @@ function NavigationBar() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/add">Add Treatment</Link>
+          <Link to="/add">Add Products</Link>
         </li>
         <li>
-          <Link to="/customer-treatments">Customer Treatments</Link>
+          <Link to="/customer-treatments">Customer Orders</Link>
         </li>
        
         {/* Add other links as needed */}
